@@ -1,13 +1,16 @@
 .recommended {
-   text-align: center; 
+    text-align: center; 
     background-color: #F6F6F6;
-    margin: 1rem 6rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 400;
     padding-top: 1rem;
+    margin-top: 0;
 }
 
 .ourFavourites {
