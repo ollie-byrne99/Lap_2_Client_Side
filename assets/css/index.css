@@ -1,6 +1,5 @@
 .recommended {
-    display: flex;
-    justify-content: center;
+   text-align: center; 
     background-color: #F6F6F6;
     margin: 1rem 6rem;
 }
@@ -8,4 +7,23 @@
 h2 {
     font-size: 2rem;
     font-weight: 400;
+}
+
+.ourFavourites {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#ollie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookCover {
+    height: 24rem;
+}
+
+.borrow {
+    margin: 1rem;
 }
