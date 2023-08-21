@@ -52,6 +52,18 @@ nav a:visited {
     text-decoration: none;
 }
 
+#search {
+    text-align: center;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 0.3rem;
+    font-size: 2rem;
+}
+
 footer {
     display: flex;
     flex-direction: column;
