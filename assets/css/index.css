@@ -18,6 +18,11 @@ h2 {
     justify-content: space-evenly;
 }
 
+.harryPotter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .borrowDiv {
     display: flex;
     flex-direction: column;
