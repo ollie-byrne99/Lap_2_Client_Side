@@ -1,0 +1,13 @@
+.borrowBtn {
+    width: 15.5rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-size: 1.25rem;
+    color: #191919;
+    background-color: #FF6D34;
+    border: none;
+}
+
+.borrowBtn:hover{
+    background-color: #D35A2B;
+}
