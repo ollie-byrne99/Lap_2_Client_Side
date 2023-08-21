@@ -1,0 +1,11 @@
+.recommended {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+    margin: 1rem 6rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
