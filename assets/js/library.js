@@ -1,5 +1,3 @@
-const descr = document.querySelector('.description')
-const cover = document.querySelector('.cover')
 const library = document.querySelector('.books')
 
 const addBooks = data => {
@@ -30,7 +28,6 @@ const addBooks = data => {
         genre.textContent = "Genre: " + book.genre
         description.textContent = "Description: " + book.description
         image.src = '../images/ollie.jpg'
-        // image.width = '100'
         btn.textContent = "button"
 
         div.appendChild(name)
