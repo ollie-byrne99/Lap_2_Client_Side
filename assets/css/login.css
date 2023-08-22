@@ -5,6 +5,10 @@
     font-size: 1rem;
 }
 
+#loginBtn {
+    margin-top: 2rem;
+}
+
 #register {
     color: #FF6D34;
 }
