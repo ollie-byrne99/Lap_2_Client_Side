@@ -11,3 +11,7 @@
 .borrowBtn:hover{
     background-color: #D35A2B;
 }
+
+.lrBtn{
+    margin-top: 2rem;
+}

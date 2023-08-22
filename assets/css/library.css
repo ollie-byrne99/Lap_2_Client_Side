@@ -1,18 +1,10 @@
-.library {
-    text-align: center; 
-    background-color: #F6F6F6;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-bottom: 1.5rem;
-}
-
 .libraryDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .coverInfo {

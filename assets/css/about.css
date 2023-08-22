@@ -1,0 +1,24 @@
+p {
+    font-size: 1.25rem;
+}
+
+ul {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:visited {
+    color: #191919;
+}
