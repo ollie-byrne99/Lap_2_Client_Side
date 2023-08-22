@@ -5,9 +5,14 @@
     font-size: 1rem;
 }
 
+.lrBtn {
+    margin-top: 1.5rem;
+}
+
 #loginRegister {
     margin-bottom: 0;
 }
+
 #register {
     color: #FF6D34;
 }
