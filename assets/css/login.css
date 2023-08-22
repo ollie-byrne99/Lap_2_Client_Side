@@ -1,0 +1,14 @@
+.input {
+    width: 20%;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#register {
+    color: #FF6D34;
+}
+
+a {
+    text-decoration: none;
+}
