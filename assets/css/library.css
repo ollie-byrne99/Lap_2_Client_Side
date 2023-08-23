@@ -4,14 +4,7 @@
     align-items: center;
 }
 
-.coverInfo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
 .description {
-    padding-left: 2rem;
     text-align: left;
     font-size: 1.25rem;
     width: 50%;
