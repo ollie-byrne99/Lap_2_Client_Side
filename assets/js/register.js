@@ -24,8 +24,8 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
             password: password
         })
     }
-
-    const response = await fetch("http://localhost:3000/users/register", options);
+    
+    const response = await fetch("https://book-wiz-jdyf.onrender.com/users/register", options);
 
     if (!response.ok) {
         alert("Server returned an error: " + response.status);
