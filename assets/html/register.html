@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/bookwiz.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2d69e80447.js" crossorigin="anonymous"></script>
-    <script defer src="../../bundle.js"></script>
+    <script defer src="../js/register.js"></script>
 </head>
 <body>
     <header>
-        <img src="../images/logo.png" title="logo" alt="logo" id="logo">
+        <img src="../images/bookwiz.png" title="logo" alt="logo" id="logo">
         <div id="nav">
             <h1>BookWiz</h1>
             <nav>
@@ -26,26 +26,14 @@
     </header>
 
     <main>
-        <section>
-            <form id="search"> 
-                <input type="search" id="searchBar" placeholder="Search for book or author..." aria-label="Search for a book or author">
-            </form>
-        </section>
-
-        <section class="main">
+        <section class="main" id="lrmain">
             <h2>Register</h2>
-            <h3>Email</h3>
-            <form> 
-                <input type="email" class="input" placeholder="Email" aria-label="Input email here">
-            </form>
             <h3>Username</h3>
-            <form> 
-                <input type="text" class="input" placeholder="Username" aria-label="Input username here">
-            </form>
+            <input type="text" class="input" id="inputUsername" placeholder="Username" aria-label="Input username here">
             <h3>Password</h3>
-            <form> 
-                <input type="password" class="input" placeholder="Password" aria-label="Input password here">
-            </form>
+            <input type="password" class="input" id="inputPassword" placeholder="Password" aria-label="Input password here">
+            <h3>Confirm Password</h3>
+            <input type="password" class="input" id="inputConfirmPassword" placeholder="Confirm Password" aria-label="Input password again">
             <button class="lrBtn" id="registerBtn" aria-label="Log into app">Register!</button>
         </section>
     </main>

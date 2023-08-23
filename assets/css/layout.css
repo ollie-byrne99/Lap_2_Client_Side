@@ -23,12 +23,6 @@ header {
     margin-left: 2rem;
 }
 
-#nav {
-    display: flex;
-    align-items: baseline;
-    margin-right: 2rem;
-}
-
 h1 {
     font-family: 'Alice', serif;
     font-size: 4.5rem;
@@ -37,16 +31,30 @@ h1 {
     margin-bottom: 2rem;
 }
 
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 2rem;
+}
+
 nav {
     font-size: 2rem;
     margin-left: 2rem;
 }
 
+#registerBtn {
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #FFFCFC;
+}
+
 nav a {
     text-decoration: none;
     color: #FFFCFC;
-    padding-left: 3.9rem;
-    padding-right: 3.9rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
 }
 
 nav a:visited {
