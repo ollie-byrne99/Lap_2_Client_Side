@@ -1,12 +1,13 @@
-const dropdown = document.getElementById('genreDropdown');
-const outputDiv = document.getElementById('output');
+const dropdown = document.getElementById('genreDropdown'); // Must create this element in library.html
+
 
 dropdown.addEventListener('change', function() {
     const selectedValue = dropdown.value;
-    outputDiv.innerHTML = '';
+
     const url = `https://book-wiz-jdyf.onrender.com/books/genre/${selectedValue}`; // url changes based on the value of the selected option in the genre dropdown menu
     
     const library = document.querySelector('#books');
+    library.innerHTML = '';
 
     function createBookElement(book) {
         const {name, author, year, genre, description} = book;
