@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function displayBookInfo(book) {
         const {name, author, year, genre, description} = book;
-        const libraryDiv = document.querySelector('.libraryDiv');
+        
+        const surpriseDiv = document.querySelector('.surpriseDiv');
         const bookDiv = document.createElement('div');
-        bookDiv.classList.add('libraryDiv');
+        bookDiv.classList.add('surpriseDiv');
 
         const img = document.createElement('img');
         img.src = '../images/ollie.jpg';
@@ -46,6 +47,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         btn.classList.add('borrowBtn');
         btn.textContent = 'Borrow';
         bookDiv.appendChild(btn);
-        libraryDiv.appendChild(bookDiv)
+        surpriseDiv.appendChild(bookDiv)
     }
 });
