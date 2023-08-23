@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
 
         try {
-            const response = await fetch('http://localhost:4000/books/random');
+            const response = await fetch('https://book-wiz-jdyf.onrender.com/books/random');
             const data = await response.json();
 
             if (response.ok) {
