@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = "https://book-wiz-jdyf.onrender.com/books";
 
     function createBookElement(book) {
-        const {name, author, year, genre, description} = book;
+        const {name, author, year, genre, description, image} = book;
 
         const bookDiv = document.createElement('div');
         bookDiv.classList.add('libraryDiv');
 
         const img = document.createElement('img');
-        img.src = '../images/ollie.jpg';
+        img.src = image;
         img.classList.add('bookPadding', 'bookCover');
         bookDiv.appendChild(img);
 
