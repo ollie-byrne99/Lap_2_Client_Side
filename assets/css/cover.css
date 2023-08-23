@@ -1,7 +1,9 @@
 .bookCover {
     height: 24rem;
     width: 16rem;
+    border: 0.1rem solid #191919;
 }
+
 .bookPadding {
     padding-bottom: 30px;
 }
