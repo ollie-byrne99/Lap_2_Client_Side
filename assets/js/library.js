@@ -20,6 +20,7 @@ const addBooks = data => {
         container.classList.add('libraryDiv')
         div.classList.add('description')
         btn.classList.add('borrowBtn')
+        image.classList.add('bookPadding')
         image.classList.add('bookCover')
 
         name.textContent = "Name: " + book.name
@@ -28,7 +29,7 @@ const addBooks = data => {
         genre.textContent = "Genre: " + book.genre
         description.textContent = "Description: " + book.description
         image.src = '../images/ollie.jpg'
-        btn.textContent = "button"
+        btn.textContent = "Borrow"
 
         div.appendChild(name)
         div.appendChild(author)
