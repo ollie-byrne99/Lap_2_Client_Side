@@ -1,22 +1,21 @@
-const dropdown = document.getElementById('genreDropdown'); // Must create this element in library.html
-
+const dropdown = document.getElementById('genreDropdown');
 
 dropdown.addEventListener('change', function() {
     const selectedValue = dropdown.value;
 
-    const url = `https://book-wiz-jdyf.onrender.com/books/genre/${selectedValue}`; // url changes based on the value of the selected option in the genre dropdown menu
+    const url = `https://book-wiz-jdyf.onrender.com/books/genre/${selectedValue}`;
     
     const library = document.querySelector('#books');
     library.innerHTML = '';
 
     function createBookElement(book) {
-        const {name, author, year, genre, description} = book;
+        const {name, author, year, genre, description, image} = book;
 
         const bookDiv = document.createElement('div');
         bookDiv.classList.add('libraryDiv');
 
         const img = document.createElement('img');
-        img.src = '../images/ollie.jpg';
+        img.src = image;
         img.classList.add('bookPadding', 'bookCover');
         bookDiv.appendChild(img);
 
@@ -44,7 +43,7 @@ dropdown.addEventListener('change', function() {
         bookDiv.appendChild(btn);
 
         return bookDiv;
-        }
+    }
 
     function addBooks(books) {
         books.forEach(book => {
