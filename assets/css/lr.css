@@ -5,8 +5,12 @@
     font-size: 1rem;
 }
 
-#loginBtn {
-    margin-top: 2rem;
+.lrBtn {
+    margin-top: 1.5rem;
+}
+
+#loginRegister {
+    margin-bottom: 0;
 }
 
 #register {

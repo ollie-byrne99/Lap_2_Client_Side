@@ -2,14 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding-bottom: 1rem;
 }
 
 .coverInfo {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .description {

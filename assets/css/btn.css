@@ -1,4 +1,4 @@
-.borrowBtn {
+button {
     width: 16rem;
     height: 3rem;
     border-radius: 0.3rem;
@@ -8,10 +8,6 @@
     border: none;
 }
 
-.borrowBtn:hover{
+button:hover{
     background-color: #D35A2B;
-}
-
-.lrBtn{
-    margin-top: 2rem;
 }
