@@ -10,15 +10,9 @@
     font-size: 1.25rem;
 }
 
-#adminBtn {
-    width: 6rem;
-    height: 3rem;
-}
-
 #adminLink {
-    color: black;
-    text-decoration: none; /* This removes underlines from the link */
-  }
+    color: #FF6D34;
+}
 
 #genre {
     font-size: 1.25rem;
