@@ -2,17 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.coverInfo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .description {
-    padding-left: 2rem;
     text-align: left;
     font-size: 1.25rem;
     width: 50%;
 }
+
+
