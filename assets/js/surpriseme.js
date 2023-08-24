@@ -1,27 +1,26 @@
 document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        const response = await fetch('https://book-wiz-jdyf.onrender.com/books/random');
+        const data = await response.json();
 
-        try {
-            const response = await fetch('https://book-wiz-jdyf.onrender.com/books/random');
-            const data = await response.json();
-
-            if (response.ok) {
-                displayBookInfo(data);
-            } else {
-                console.error('Error fetching random book:', data.error);
-            }
-        } catch (error) {
-            console.error('Error fetching random book:', error);
+        if (response.ok) {
+            displayBookInfo(data);
+        } else {
+            console.error('Error fetching random book:', data.error);
         }
+    } catch (error) {
+        console.error('Error fetching random book:', error);
+    }
 
     function displayBookInfo(book) {
-        const {name, author, year, genre, description} = book;
+        const {name, author, year, genre, description, image} = book; 
         
         const surpriseDiv = document.querySelector('.surpriseDiv');
         const bookDiv = document.createElement('div');
         bookDiv.classList.add('surpriseDiv');
 
         const img = document.createElement('img');
-        img.src = '../images/ollie.jpg';
+        img.src = image; 
         img.classList.add('bookCover');
         bookDiv.appendChild(img);
 

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../images/bookwiz.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2d69e80447.js" crossorigin="anonymous"></script>
     <script defer src="../js/library.js"></script>
+    <script defer src="../js/genre.js"></script>
     <script defer src="../../bundle.js"></script>
 </head>
 <body>
@@ -31,6 +32,21 @@
             <form id="search"> 
                 <input type="search" id="searchBar" placeholder="Search for book or author..." aria-label="Search for a book or author">
             </form>
+        </section>
+        <section>
+            <label for="genreDropdown">Select a Genre:</label>
+            <select id="genreDropdown">
+                <option value="default" disabled selected>Genre</option>
+                <option value="romance">Romance</option>
+                <option value="dystopian">Dystopian</option>
+                <option value="literary fiction">Literary Fiction</option>
+                <option value="historical fiction">Historical Fiction</option>
+                <option value="psychological fiction">Psychological Fiction</option>
+                <option value="gothic fiction">Gothic Fiction</option>
+                <option value="epic">Epic</option>
+
+            </select>
+            <div id="output"></div>
         </section>
 
         <section class="main">
