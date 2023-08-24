@@ -9,6 +9,11 @@
     "test": "jest --watchAll",
     "coverage": "jest --coverage"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers.js"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
