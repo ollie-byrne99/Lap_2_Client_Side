@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const url = `https://book-wiz-jdyf.onrender.com/admin/`;
+    // const url = `http://localhost:3000/admin/`;
     
     const library = document.querySelector('#books');
 
@@ -69,7 +69,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    fetch(url)
+
+    const token = localStorage.getItem('token');
+
+    fetch('https://book-wiz-jdyf.onrender.com/admin', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` 
+            },
+        })
     .then(resp => {
         console.log('Response Status:', resp.status);
         return resp.json();
