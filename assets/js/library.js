@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const img = document.createElement('img');
         img.src = image;
-        img.classList.add('bookPadding', 'bookCover');
+        img.classList.add('bookCover');
         bookDiv.appendChild(img);
 
         const descriptionDiv = document.createElement('div');
