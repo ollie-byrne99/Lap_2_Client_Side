@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // const url = `http://localhost:3000/admin/`;
-    
     const library = document.querySelector('#books');
 
     function createBookElement(book) {
@@ -47,17 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` 
+                'Authorization': `${token}` 
             },
         })
-        .then(response => response.json())
-        .then(data => {
-            alert('Book returned successfully!');
-            location.reload();
+        .then(response => {
+            if (response.ok) {
+                alert('Book returned successfully!');
+                location.reload();
+            } else {
+                alert('Failed to return the book.');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Sorry, you must be an admin to return books.');
+            alert('An error occurred while processing the request.');
         });
     }
 
@@ -76,13 +77,23 @@ document.addEventListener('DOMContentLoaded', function() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` 
+                'Authorization': `${token}`
             },
         })
     .then(resp => {
+        console.log('token', token)
         console.log('Response Status:', resp.status);
+        if (!resp.ok) {
+            throw new Error('Failed to fetch data');
+        }
         return resp.json();
     })
-    .then(addBooks)
+    .then(data => {
+        if (Array.isArray(data)) {
+            addBooks(data);
+        } else {
+            console.error('Invalid response format:', data);
+        }
+    })
     .catch(err => console.log('Fetch Error:', err));
 });
