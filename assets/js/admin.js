@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    fetch(`http://localhost:3000/admin/`, {
+    fetch('https://book-wiz-jdyf.onrender.com/admin', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
