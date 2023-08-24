@@ -10,6 +10,7 @@
     <script defer src="../js/search.js"></script>
     <script defer src="../js/library.js"></script>
     <script defer src="../js/genre.js"></script>
+    <script defer src="../js/isadmin.js"></script>
     <script defer src="../../bundle.js"></script>
 </head>
 <body>
@@ -36,6 +37,9 @@
             </form>
         </section>
         <section>
+            <a id="adminLink" href="./admin.html">Admin</a>
+        </section>
+        <section>
             <label for="genreDropdown">Select a Genre:</label>
             <select id="genreDropdown">
                 <option value="default" disabled selected>Genre</option>
@@ -46,7 +50,6 @@
                 <option value="psychological fiction">Psychological Fiction</option>
                 <option value="gothic fiction">Gothic Fiction</option>
                 <option value="epic">Epic</option>
-
             </select>
             <div id="output"></div>
         </section>
