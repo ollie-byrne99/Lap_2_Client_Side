@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search')
     const library = document.querySelector('#books')
 
-
     function createBookElement(book) {
         const {name, author, year, genre, description} = book;
 
