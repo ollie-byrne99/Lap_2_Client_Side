@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
+    const token = localStorage.getItem('token');
 
     fetch('https://book-wiz-jdyf.onrender.com/admin', {
             method: 'GET',
