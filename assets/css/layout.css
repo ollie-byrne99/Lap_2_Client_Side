@@ -31,6 +31,13 @@ h1 {
     margin-bottom: 2rem;
 }
 
+#navLogout {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 2rem;
+}
+
 #nav {
     display: flex;
     justify-content: space-between;
@@ -48,6 +55,20 @@ nav {
     height: 4rem;
     font-size: 2rem;
     color: #FFFCFC;
+}
+
+#logoutButton {
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #FFFCFC;
+}
+
+#navLogout a {
+    text-decoration: none;
+    color: #FFFCFC;
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
 }
 
 nav a {
