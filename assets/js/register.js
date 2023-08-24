@@ -1,4 +1,4 @@
-document.getElementById("registerBtn").addEventListener("click", async () => {
+document.getElementById("submitRegister").addEventListener("click", async (event) => {
     
     const usernameInput = document.getElementById('inputUsername');
     const passwordInput = document.getElementById('inputPassword');
@@ -27,16 +27,11 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
     
     const response = await fetch("https://book-wiz-jdyf.onrender.com/users/register", options);
 
-    if (!response.ok) {
-        alert("Server returned an error: " + response.status);
-        return;
-    }
-
     const data = await response.json();
 
     if (response.status == 201) {
         window.location.assign("./login.html");
     } else {
-        alert(data.error);
+        alert(data.error || "An error occurred");
     }
 });
