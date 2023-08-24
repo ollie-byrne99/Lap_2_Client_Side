@@ -44,37 +44,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleBorrow(event) {
         const bookId = event.target.getAttribute('data-book-id');
+        const username = localStorage.getItem('username'); 
+    
+        if (!username) {
+            alert('Username not found. Please login again.');
+            return;
+        }
+    
         
-        const userId = '1';
+        fetch(`https://book-wiz-jdyf.onrender.com/users/${username}`)
+            .then(response => response.json())
+            .then(userData => {
+                const userId = userData.user_id; 
     
-        const currentDate = new Date();
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        const dueDate = currentDate.toISOString().slice(0, 19).replace('T', ' ');
+                const currentDate = new Date();
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                const dueDate = currentDate.toISOString().slice(0, 19).replace('T', ' ');
     
-        const data = {
-            book_id: bookId,
-            user_id: userId,
-            due_date: dueDate
-        };
+                const data = {
+                    book_id: bookId,
+                    user_id: userId,
+                    due_date: dueDate
+                };
     
-        const token = localStorage.getItem('token');
+                const token = localStorage.getItem('token');
     
-        fetch('https://book-wiz-jdyf.onrender.com/borrowed', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` 
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Book borrowed successfully!');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Sorry, you must be logged in to borrow books.');
-        });
+                
+                return fetch('https://book-wiz-jdyf.onrender.com/borrowed', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}` 
+                    },
+                    body: JSON.stringify(data)
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Book borrowed successfully!');
+                window.location.reload();  
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please check your input or ensure you are logged in.');
+            });
     }
     
     
