@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search')
     const library = document.querySelector('#books')
+    const url = "https://book-wiz-jdyf.onrender.com/books";
 
     function createBookElement(book) {
         const {name, author, year, genre, description} = book;
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             p.textContent = detail;
             descriptionDiv.appendChild(p);
         });
-        console.log(bookDetails)
+
         const btn = document.createElement('button');
         btn.classList.add('borrowBtn');
         btn.textContent = 'Borrow';
@@ -46,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    fetch(url)
+        .then(resp => resp.json())
+        .then(addBooks)
+        .catch(err => console.log(err));
+
     function getBookByKeyword(keyword) {
         fetch(`https://book-wiz-jdyf.onrender.com/books/search/${keyword}`)
         .then(resp => resp.json())
@@ -55,10 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener("keydown", (e) => {
         if (e.key === 'Enter') {
             e.preventDefault()
-            getBookByKeyword(searchInput.value)
-        } else if (e.key === 'Backspace') {
             library.innerHTML = ''
-        }
+            getBookByKeyword(searchInput.value)
+        } 
     })
 
 })
