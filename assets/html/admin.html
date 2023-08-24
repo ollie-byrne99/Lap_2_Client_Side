@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
+    <title>Library</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/bookwiz.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2d69e80447.js" crossorigin="anonymous"></script>
-    <script defer src="../js/search.js"></script>
+    <script defer src="../js/admin.js"></script>
     <script defer src="../../bundle.js"></script>
 </head>
 <body>
     <header>
-        <img src="../images/logo.png" title="logo" alt="logo" id="logo">
+        <img src="../images/bookwiz.png" title="logo" alt="logo" id="logo">
         <div id="nav">
             <h1>BookWiz</h1>
             <nav>
@@ -21,7 +21,8 @@
                 <a href="./surpriseme.html" aria-label="Surprise Me!">Surprise Me!</a>
                 <a href="./about.html" aria-label="About">About</a>
                 <a href="./login.html" aria-label="Login">Login</a>
-                <a href="./register.html" aria-label="Register">Register</a>           
+                <a href="./register.html" aria-label="Register"><button id="registerBtn">Register</button></a>          
+                <a href="../../index.html" aria-label="Log Out"><button id="logoutButton">Log Out</button></a>   
             </nav>
         </div>
     </header>
@@ -29,16 +30,27 @@
     <main>
         <section>
             <form id="search"> 
-                <input type="search" class="search" id="searchBar" placeholder="Search for book or author..." aria-label="Search for a book or author">
-                <!-- if wanted to add a button to page
-                <button id="searchBtn">Search</button> -->
+                <input type="search" id="searchBar" placeholder="Search for book or author..." aria-label="Search for a book or author">
             </form>
+        </section>
+        <section>
+            
+            <div id="output"></div>
         </section>
 
         <section class="main">
-            <h2>Search Results</h2>
+            <h2>Library</h2>
             <div id="books">
+                <div class="libraryDiv">
+                </div>
             </div>
         </section>
+    </main>
+
+    <footer>
+        <p>
+            BookWiz 2023<i class="fa-regular fa-copyright" style="color: #FFFCFC;"></i>
+        </p>
+    </footer>
 </body>
 </html>

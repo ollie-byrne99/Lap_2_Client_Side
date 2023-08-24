@@ -1,7 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('.search')
-    const library = document.querySelector('#books')
-    const url = "https://book-wiz-jdyf.onrender.com/books";
+const searchBar = document.getElementById('searchBar');
+
+searchBar.addEventListener('input', function() {
+    const searchValue = searchBar.value.trim();
+
+    const url = `https://book-wiz-jdyf.onrender.com/books/search/${searchValue}`;
+    
+    const library = document.querySelector('#books');
+    library.innerHTML = '';
 
     function createBookElement(book) {
         const {name, author, year, genre, description, image} = book;
@@ -51,19 +56,4 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(resp => resp.json())
         .then(addBooks)
         .catch(err => console.log(err));
-
-    function getBookByKeyword(keyword) {
-        fetch(`https://book-wiz-jdyf.onrender.com/books/search/${keyword}`)
-        .then(resp => resp.json())
-        .then(addBooks)
-    }
-
-    searchInput.addEventListener("keydown", (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault()
-            library.innerHTML = ''
-            getBookByKeyword(searchInput.value)
-        } 
-    })
-
-})
+});

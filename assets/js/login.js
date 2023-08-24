@@ -1,7 +1,6 @@
 document.querySelector('.lrBtn').addEventListener('click', async (e) => {
     e.preventDefault();
 
-    
     const username = document.querySelector('input[placeholder="Username"]').value;
     const password = document.querySelector('input[placeholder="Password"]').value;
 
@@ -23,6 +22,7 @@ document.querySelector('.lrBtn').addEventListener('click', async (e) => {
 
         if (response.status == 200) {
             localStorage.setItem("token", data.token);
+            localStorage.setItem("username", username);
             window.location.assign("./library.html");
         } else {
             alert(data.error);
