@@ -1,5 +1,6 @@
-// const listBtn = document.querySelector('#btn-list')
-// listBtn.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     window.location.href = "../assets/html/book-list.html"
-// })
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        localStorage.removeItem('token');
+        alert('Logged out successfully!');
+    });
+});
