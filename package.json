@@ -10,8 +10,9 @@
     "coverage": "jest --coverage"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "./__tests__/helpers.js"
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**"
     ]
   },
   "keywords": [],
